@@ -35,7 +35,6 @@ const sizeY = ref(0);
 const firstBlock = ref(0);
 const secondBlock = ref(0);
 
-// const setBlocks = computed(() => console.log("cacacsc"));
 const setBlocks = computed(() => sizeX.value * sizeY.value);
 </script>
 

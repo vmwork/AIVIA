@@ -52,16 +52,14 @@ const validations = () => {
 };
 
 const submit = () => {
-  // validations();
-  if (v$.value.$error) {
-    passwordRules.value = ["Input password"];
+  if (!email.value) {
     emailRules.value = ["Input Email"];
+  } else if (!password.value) {
+    passwordRules.value = ["Input password"];
   } else {
     passwordRules.value = [""];
     emailRules.value = [""];
     router.push("/game");
   }
-
-  console.log(v$.value.$error);
 };
 </script>
